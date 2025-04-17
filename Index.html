@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Osama Jameel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-inside">
+      <div class="logo">Osama.</div>
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="Project.html">Projects</a>
+        <a href="Education.html">Education</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+      <!-- Info -->
+      <div class="info">
+        <h1>Osama Jameel</h1>
+        <h2>Software Engineer</h2>
+        <p>I'm a passionate Software Engineer dedicated to building fast, modern, and user-friendly digital experiences. I specialize in turning complex problems into clean, functional code while continuously learning new technologies to grow in this ever-evolving tech world.</p>
+        <div class="buttons">
+          <a href="#">Download CV</a>
+        </div>
+        <div class="socials">
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="profile-pic">
+        <img src="Profile.png" alt="Profile Picture">
+      </div>
+    </div>
+  </div>
+  <script>
+    const container = document.querySelector('.container');
+  
+    container.addEventListener('mousemove', (e) => {
+      const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+      const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+      container.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+  
+    container.addEventListener('mouseenter', () => {
+      container.style.transition = 'none';
+    });
+  
+    container.addEventListener('mouseleave', () => {
+      container.style.transition = 'transform 0.5s ease';
+      container.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+  </script>
+  
+</body>
+</html>
